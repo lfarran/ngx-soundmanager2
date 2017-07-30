@@ -25,7 +25,9 @@ SoundManager 2 brings reliable cross-platform audio to JavaScript.
     
 ## Credits:
 Credit goes to:
+
 [Scott Schiller](https://github.com/scottschiller) for his excellent [SoundManager2](https://github.com/scottschiller/SoundManager2).
+
 [Parminder Klair](https://github.com/perminder-klair) for his AngularJS (v1.x) [angular-soundmanager2](https://github.com/perminder-klair/angular-soundmanager2) that this project is based on.
 
 ## License:
