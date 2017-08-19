@@ -13,6 +13,42 @@ SoundManager 2 brings reliable cross-platform audio to JavaScript.
     * Soundcloud support
     * Easy to understand and extend API
 
+# How to use?
+
+```
+$ npm i ngx-soundmanager2 --save
+```
+
+# Integration
+
+Should work out of the box with webpack, respectively angular-cli. All you need to do is to include `NgxSoundmanager2Module`:
+
+```ts
+import { NgxSoundmanager2Module } from 'ngx-soundmanager2';
+
+@NgModule({
+  imports: [NgxSoundmanager2Module],
+  ...
+})
+class AppModule {}
+```
+
+## Angular Seed
+
+```ts
+// tools/config/project.ts
+
+...
+// Add packages (e.g. ngx-soundmanager2)
+let additionalPackages: ExtendPackages[] = [{
+  name: 'ngx-soundmanager2',
+  path: 'node_modules/ngx-soundmanager2/ngx-soundmanager2.bundle.js'
+}];
+
+this.addPackagesBundles(additionalPackages);
+...
+```
+
 ## HTML5 Audio() Support
 
     * 100% Flash-free MP3 + MP4/AAC where supported
