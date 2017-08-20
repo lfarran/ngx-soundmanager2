@@ -10,5 +10,6 @@ export class MusicPlayerEventConstants {
   public static get SOUND_MANAGER_READY(): string { return 'Sound manager ready!'; }
   public static get TRACK_ID(): string { return 'track:id'; }
   public static get TRACK_LOADED(): string { return 'track:loaded'; }
+  public static get TRACK_STOP(): string { return 'track:stop'; }
   //public static get TRACK_PROGRESS(): string { return 'track:progress'; }
 }

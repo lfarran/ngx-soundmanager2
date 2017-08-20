@@ -24,6 +24,7 @@ export class MusicPlayerService {
   public musicPlayerEventEmitter: EventEmitter<any> = new EventEmitter();
   public musicPlayerMuteEventEmitter: EventEmitter<any> = new EventEmitter();
   public musicPlayerRepeatEventEmitter: EventEmitter<any> = new EventEmitter();
+  public musicPlayerStopEventEmitter: EventEmitter<any> = new EventEmitter();
   public musicPlayerTrackEventEmitter: EventEmitter<any> = new EventEmitter();
   public musicPlayerVolumeEventEmitter: EventEmitter<any> = new EventEmitter();
 
@@ -363,8 +364,8 @@ export class MusicPlayerService {
       trackDuration: 0,
       trackPosition: 0
     };
-    this.musicPlayerTrackEventEmitter.emit({
-      event: MusicPlayerEventConstants.TRACK_ID,
+    this.musicPlayerStopEventEmitter.emit({
+      event: MusicPlayerEventConstants.TRACK_STOP,
       data: trackEventData
     });
 
