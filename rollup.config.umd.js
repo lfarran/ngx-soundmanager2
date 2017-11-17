@@ -18,7 +18,13 @@ export default {
     sourceMap:true,
     dest:PATH_DIST + nameLibrary + ".umd.js",
     plugins: [
-        angular(),
+        angular(
+            {
+                preprocessors: {
+                    template: template => template
+                }
+            }
+        ),
         typescript({
             typescript:require('typescript')
         }),
