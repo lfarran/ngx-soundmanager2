@@ -16,13 +16,13 @@ import {
   RemoveFromPlaylistDirective,
   RepeatMusicDirective,
   StopMusicDirective
-} from './index';
+} from './ngx-soundmanager2';
 
 // pipes
-import { HumanTimePipe } from './index';
+import { HumanTimePipe } from './ngx-soundmanager2';
 
 // services
-import { MusicPlayerService } from './index';
+import { MusicPlayerService } from './ngx-soundmanager2';
 
 @NgModule({
   declarations: [
