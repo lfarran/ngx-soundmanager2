@@ -1,14 +1,14 @@
 {
   "name": "ngx-soundmanager2",
   "description": "SoundManager2 Music Player for Angular2+",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "ngx-soundmanager2.umd.js",
   "jsnext:main": "ngx-soundmanager2.esm.js",
   "module": "ngx-soundmanager2.esm.js",
   "types": "ngx-soundmanager2.d.ts",
   "scripts": {
     "copy": "node tools/copy-package.js && node tools/cleanup.js",
-    "bundle": "rimraf dist && rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js && tsc && ngc",
+    "bundle": "rimraf dist && rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js && tsc",
     "postbundle": "node tools/removecode.js",
     "build": "npm run bundle && npm run copy",
     "publish": "cd ./dist && npm publish"

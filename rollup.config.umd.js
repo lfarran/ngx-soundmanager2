@@ -16,7 +16,7 @@ export default {
         "@angular/platform-browser"
     ],
     sourceMap:true,
-    dest:PATH_DIST + nameLibrary + ".umd.js",
+    dest: PATH_DIST + nameLibrary + ".umd.js",
     plugins: [
         angular(
             {
