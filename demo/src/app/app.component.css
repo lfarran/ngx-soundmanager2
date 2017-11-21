@@ -1,0 +1,34 @@
+
+.sub-title {
+  margin-left: 20px;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+
+.button-row {
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+.songs {
+  margin-left: -200px;
+}
+
+.song-title-btn {
+  text-align: right;
+  width: 300px;
+}
+
+.play-btns {
+  margin-top: 20px;
+}
+
+.playlist-title {
+  margin-top: 20px;
+}
+
+.playlist {
+  padding-bottom: 30px;
+}

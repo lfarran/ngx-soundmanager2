@@ -1,0 +1,111 @@
+<mat-toolbar>
+  <a href="https://github.com/lfarran/ngx-soundmanager2">ngx-soundmanager2</a>
+  <small class="sub-title">An Audio Player for Angular</small>
+
+  <span class="fill-space"></span>
+
+  <!-- https://buttons.github.io/ -->
+  <span class="github">
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button"
+       href="https://github.com/lfarran/ngx-soundmanager2"
+       data-icon="octicon-star"
+       data-show-count="true"
+       aria-label="Star lfarran/ngx-soundmanager2 on GitHub">
+      Star
+    </a>
+
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button"
+       href="https://github.com/lfarran/ngx-soundmanager2/fork"
+       data-icon="octicon-repo-forked"
+       data-show-count="true"
+       aria-label="Fork lfarran/ngx-soundmanager2 on GitHub">
+      Fork
+    </a>
+  </span>
+</mat-toolbar>
+
+<div style="text-align:center; margin: 8px;">
+  <h1 class="mat-h1">
+    Welcome to {{ title }}!
+  </h1>
+
+  <div>
+    <h5 class="mat-title">Songs</h5>
+    <div *ngFor="let song of songs" class="songs">
+      <div class="button-row">
+        <button mat-button color="primary" class="song-title-btn" [musicPlayer]="'play'" [song]="song">
+          {{ song.title }}
+        </button>
+        <button mat-mini-fab color="accent" musicPlayer [song]="song">+</button>
+      </div>
+    </div>
+
+    <div class="button-row play-btns">
+      <button mat-raised-button color="primary" playAll [songs]="songs">Play all</button>
+      <button mat-raised-button color="accent" playAll [songs]="songs" [play]="false">Add all</button>
+    </div>
+  </div>
+
+  <hr />
+
+  <div>
+    <p *ngIf="currentPlaying" class="mat-body">
+      Currently Playing: {{ currentPlaying.title }} by {{ currentPlaying.artist }} ({{ currentTrackPostion | humanTime }} / {{ currentTrackDuration | humanTime }})
+    </p>
+
+    <div class="progress" style="height: 20px; width: 100%;">
+      <div class="progress-bar progress-bar-success"
+           role="progressbar"
+           [ngStyle]="{width : progress }">
+        <span class="sr-only"></span>
+      </div>
+    </div>
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" playMusic>
+        <i class="fa fa-play" aria-hidden="true"></i>
+      </button>
+      <button mat-raised-button color="accent" pauseMusic>
+        <i class="fa fa-pause" aria-hidden="true"></i>
+      </button>
+      <button mat-raised-button color="warn" stopMusic>
+        <i class="fa fa-stop" aria-hidden="true"></i>
+      </button>
+      <button mat-raised-button repeatMusic>Repeat</button>
+    </div>
+
+    <h5 class="mat-body">Volume: {{ volume }}</h5>
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" increaseVolume>+</button>
+      <button mat-raised-button color="accent" decreaseVolume>-</button>
+      <button mat-raised-button muteMusic>Mute ({{ mute }})</button>
+    </div>
+
+    <div class="button-row">
+      <button mat-icon-button color="primary" previousTrack>
+        <i class="fa fa-step-backward" aria-hidden="true"></i>
+      </button>
+      <button mat-icon-button color="primary" nextTrack>
+        <i class="fa fa-step-forward" aria-hidden="true"></i>
+      </button>
+      <button mat-raised-button color="primary" clearPlaylist>Clear Playlist</button>
+    </div>
+
+    <h5 class="mat-title playlist-title">Playlist:</h5>
+
+    <div class="playlist">
+      <div *ngFor="let song of playlist; index as i;">
+        <a playFromPlaylist [song]="song">{{ song.title }}</a>
+        <a removeFromPlaylist [song]="song" [index]="i">
+          <small>(remove)</small>
+        </a>
+        <span *ngIf="currentPlaying && currentPlaying.id == song.id"> - (current)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+

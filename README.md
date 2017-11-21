@@ -17,17 +17,25 @@ SoundManager 2 brings reliable cross-platform audio to JavaScript.
 
 ```
 $ npm i ngx-soundmanager2 --save
+$ npm i soundmanager2 --save
 ```
 
 # Integration
 
 Should work out of the box with webpack, respectively angular-cli. All you need to do is to include `NgxSoundmanager2Module`:
 
+Add soundmanager2 to the .angular-cli.json scripts array:
+```
+ "scripts": [
+    "../node_modules/soundmanager2/script/soundmanager2-jsmin.js"
+  ],
+```
+
 ```ts
 import { NgxSoundmanager2Module } from 'ngx-soundmanager2';
 
 @NgModule({
-  imports: [NgxSoundmanager2Module],
+  imports: [NgxSoundmanager2Module.forRoot()],
   ...
 })
 class AppModule {}
@@ -46,8 +54,27 @@ let additionalPackages: ExtendPackages[] = [{
 }];
 
 this.addPackagesBundles(additionalPackages);
+
+// Add `NPM` third-party libraries to be injected/bundled.
+this.NPM_DEPENDENCIES = [
+    ...this.NPM_DEPENDENCIES,
+    { src: 'soundmanager2/script/soundmanager2-jsmin.js', inject: 'libs' },
+];
 ...
 ```
+
+## Running the Demo
+
+Clone the ngx-soundmanager2 repository.
+
+```
+$ cd ngx-soundmanager2
+$ cd demo
+$ npm install
+$ ng serve
+```
+
+Open demo at http://localhost:4200/ 
 
 ## HTML5 Audio() Support
 
