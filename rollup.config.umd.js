@@ -11,10 +11,12 @@ export default {
     input: PATH_SRC + nameLibrary + '.ts',
     name: nameLibrary,
     globals: {
-        'soundmanager2': 'soundmanager2'
+        'soundManager': 'soundmanager2',
+        '@angular/core': '@angular/core'
     },
     external: [
-        'soundmanager2'
+        'soundmanager2',
+        '@angular/core'
     ],
     sourcemap:true,
     output: {
