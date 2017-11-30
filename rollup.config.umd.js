@@ -8,15 +8,19 @@ import {
     PATH_DIST
 } from './config-library.js';
 export default {
-    entry: PATH_SRC + nameLibrary + '.ts',
-    format: 'umd',
-    moduleName: nameLibrary,
+    input: PATH_SRC + nameLibrary + '.ts',
+    name: nameLibrary,
+    globals: {
+        'soundmanager2': 'soundmanager2'
+    },
     external: [
-        '@angular/core',
-        "@angular/platform-browser"
+        'soundmanager2'
     ],
-    sourceMap:true,
-    dest: PATH_DIST + nameLibrary + ".umd.js",
+    sourcemap:true,
+    output: {
+        file: PATH_DIST + nameLibrary + ".umd.js",
+        format: 'umd'
+    },
     plugins: [
         angular(
             {
@@ -36,7 +40,7 @@ export default {
             include: 'node_modules/**',
         })
     ],
-    onwarn: warning => {
+    /*onwarn: warning => {
         const skip_codes = [
             'THIS_IS_UNDEFINED',
             'MISSING_GLOBAL_NAME'
@@ -45,5 +49,5 @@ export default {
             console.error('onwarn:', warning);
             return;
         }
-    }
+    }*/
 };

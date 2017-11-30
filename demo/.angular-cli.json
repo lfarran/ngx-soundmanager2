@@ -22,7 +22,7 @@
         "styles.css"
       ],
       "scripts": [
-        "../node_modules/soundmanager2/script/soundmanager2-jsmin.js"
+
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
