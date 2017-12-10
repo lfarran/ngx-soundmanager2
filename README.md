@@ -50,7 +50,7 @@ class AppModule {}
 // Add packages (e.g. ngx-soundmanager2)
 let additionalPackages: ExtendPackages[] = [{
   name: 'ngx-soundmanager2',
-  path: 'node_modules/ngx-soundmanager2/ngx-soundmanager2.umd.js'
+  path: 'node_modules/ngx-soundmanager2/ngx-soundmanager2.ts'
 }];
 
 this.addPackagesBundles(additionalPackages);

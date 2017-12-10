@@ -66,6 +66,7 @@ import { MusicPlayerService } from './music-player.service';
   ]
 })
 export class NgxSoundmanager2Module {
+  constructor() {}
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: NgxSoundmanager2Module,

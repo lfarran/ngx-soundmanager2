@@ -1,7 +1,7 @@
 {
   "name": "ngx-soundmanager2",
   "description": "SoundManager2 Music Player for Angular2+",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "main": "ngx-soundmanager2.umd.js",
   "jsnext:main": "ngx-soundmanager2.esm.js",
   "module": "ngx-soundmanager2.esm.js",
@@ -9,7 +9,7 @@
   "scripts": {
     "copy": "node tools/copy-package.js && node tools/cleanup.js",
     "bundle": "rimraf dist && rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js && tsc",
-    "postbundle": "node tools/removecode.js",
+    "postbundle": "node tools/removecode.js && node tools/copy-source.js",
     "build": "npm run bundle && npm run copy",
     "publish": "cd ./dist && npm publish"
   },
@@ -33,20 +33,20 @@
   },
   "homepage": "https://github.com/lfarran/ngx-soundmanager2#readme",
   "dependencies": {
-    "@angular/common": "^5.0.2",
-    "@angular/compiler": "^5.0.2",
-    "@angular/core": "^5.0.2",
-    "@angular/platform-browser": "^5.0.2",
-    "@angular/platform-browser-dynamic": "^5.0.2",
-    "@angular/service-worker": "^5.0.2",
+    "@angular/common": "^5.1.0",
+    "@angular/compiler": "^5.1.0",
+    "@angular/core": "^5.1.0",
+    "@angular/platform-browser": "^5.1.0",
+    "@angular/platform-browser-dynamic": "^5.1.0",
+    "@angular/service-worker": "^5.1.0",
     "core-js": "^2.5.1",
     "rxjs": "^5.5.0",
     "soundmanager2": "^2.97.20170602",
     "zone.js": "0.8.18"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "^5.0.2",
-    "@angular/platform-server": "^5.0.2",
+    "@angular/compiler-cli": "^5.1.0",
+    "@angular/platform-server": "^5.1.0",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
