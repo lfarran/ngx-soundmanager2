@@ -2,5 +2,6 @@ const fs = require('fs');
 
 let files = fs.readdirSync('lib');
 files.forEach((file) => {
-    fs.writeFileSync('dist/' + file, file);
+    let resizable = fs.readFileSync('lib/' + file).toString();
+    fs.writeFileSync('dist/' + file, resizable);
 });
