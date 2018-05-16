@@ -9,20 +9,20 @@ import {
 } from './config-library.js';
 export default {
     input: PATH_SRC + nameLibrary + '.ts',
-    name: nameLibrary,
-    globals: {
-        'soundManager': 'soundmanager2',
-        '@angular/core': '@angular/core'
+    output: {
+        file: PATH_DIST + nameLibrary + ".umd.js",
+        format: 'umd',
+        name: nameLibrary,
+        globals: {
+            'soundManager': 'soundmanager2',
+            '@angular/core': '@angular/core'
+        },
+        sourcemap:true
     },
     external: [
         'soundmanager2',
         '@angular/core'
     ],
-    sourcemap:true,
-    output: {
-        file: PATH_DIST + nameLibrary + ".umd.js",
-        format: 'umd'
-    },
     plugins: [
         angular(
             {

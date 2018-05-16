@@ -4,7 +4,7 @@ An audio player made with the SoundManager2 API for Angular (ngx Angular v4+) to
 
 SoundManager 2 brings reliable cross-platform audio to JavaScript.
 
-**Requirements:** Angular 4.3+
+**Requirements:** Angular 6.0+
 
 ## Features
 
