@@ -1,6 +1,6 @@
 # ngx-soundmanager2
 
-An audio player made with the SoundManager2 API for Angular (ngx Angular v4+) to play sound files.
+An audio player made with the SoundManager2 API for Angular (ngx Angular v6+) to play sound files.
 
 SoundManager 2 brings reliable cross-platform audio to JavaScript.
 
