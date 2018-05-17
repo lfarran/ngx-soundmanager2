@@ -33,6 +33,9 @@
   },
   "homepage": "https://github.com/lfarran/ngx-soundmanager2#readme",
   "dependencies": {
+    "soundmanager2": "^2.97.20170602"
+  },
+  "peerDependencies": {
     "@angular/common": "^6.0.2",
     "@angular/compiler": "^6.0.2",
     "@angular/core": "^6.0.2",
@@ -42,7 +45,6 @@
     "core-js": "^2.5.1",
     "rxjs": "^6.1.0",
     "rxjs-compat": "^6.1.0",
-    "soundmanager2": "^2.97.20170602",
     "zone.js": "0.8.26"
   },
   "devDependencies": {
