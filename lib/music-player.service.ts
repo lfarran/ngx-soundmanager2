@@ -1,4 +1,4 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Inject, Injectable, EventEmitter, Optional } from '@angular/core';
 import { MusicPlayerEventConstants } from './music-player-events.constants';
 import { ITrackEvent } from './itrack-event.interface';
 import { MusicPlayerUtils } from './music-player.utils';
@@ -30,18 +30,22 @@ export class MusicPlayerService {
 
   private _soundObject: any;
 
-  constructor() {
-    this.init();
+  constructor(
+    @Inject('setupOptions') @Optional() public setupOptions?: Object,
+  ) {
+    this.init(setupOptions);
   }
 
   /**
    * Initialize soundmanager,
    * requires soundmanager2 to be loaded first
    */
-  init(): void {
+  init(setupOptions?: Object): void {
     if(typeof soundManager === 'undefined') {
       alert('Please include SoundManager2 Library!');
     }
+    Object.assign(soundManager.setupOptions, setupOptions);
+    soundManager.setupOptions.ignoreMobileRestrictions = true;
     this._soundObject = soundManager.setup({
       preferFlash: false, // prefer 100% HTML5 mode, where both supported
       debugMode: false,   // enable debugging output
