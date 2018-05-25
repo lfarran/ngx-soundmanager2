@@ -14,13 +14,13 @@ export class MusicPlayerUtils {
     }
 
     if (track.url.indexOf('soundcloud') > -1) {
-      //if soundcloud url
-      if(typeof track.url === 'undefined') {
+      // if soundcloud url
+      if (typeof track.url === 'undefined') {
         console.warn('invalid soundcloud track url');
         return false;
       }
     } else {
-      if(soundManager.canPlayURL(track.url) !== true) {
+      if (soundManager.canPlayURL(track.url) !== true) {
         console.warn('invalid song url');
         return false;
       }
@@ -33,8 +33,8 @@ export class MusicPlayerUtils {
    * getIndexByValue used by this service
    */
   static GetIndexByValue(array: Array<any>, value: any): number {
-    for(let i = 0; i < array.length; i++) {
-      if(array[i] === value) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === value) {
         return i;
       }
     }
@@ -44,8 +44,8 @@ export class MusicPlayerUtils {
    * To check if value is in array
    */
   static IsInArray(array: Array<any>, value: string): number {
-    for(let i = 0; i < array.length; i++) {
-      if(array[i].id === value) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].id === value) {
         return i;
       }
     }
@@ -58,14 +58,14 @@ export class MusicPlayerUtils {
    */
   static AsyncLoop(o: any): void {
     let i = -1;
-    let loop = () => {
+    const loop = () => {
       i++;
-      if(i === o.length) {
+      if (i === o.length) {
         o.callback();
         return;
       }
       o.functionToLoop(loop, i);
     };
-    loop(); //init
+    loop(); // init
   }
 }

@@ -11,8 +11,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({name: 'humanTime'})
 export class HumanTimePipe implements PipeTransform {
   transform(value: number): string {
-    let min = (value / 1000 / 60) << 0;
-    let sec = Math.round((value / 1000) % 60);
+    const min = (value / 1000 / 60) << 0;
+    const sec = Math.round((value / 1000) % 60);
 
     return this.pad(min) + ':' + this.pad(sec);
   }

@@ -1,4 +1,4 @@
-import{ HumanTimePipe } from './human-time.pipe';
+import { HumanTimePipe } from './human-time.pipe';
 
 export function main() {
     describe('HumanTimePipe', () => {

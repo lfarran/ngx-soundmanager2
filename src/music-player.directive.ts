@@ -12,10 +12,10 @@ export class MusicPlayerDirective {
 
   @HostListener('click', ['$event']) onClick() {
     let trackId: any;
-    if(this.song) {
+    if (this.song) {
       trackId = this._musicPlayerService.addTrack(this.song);
 
-      if(this.musicPlayer === 'play') {
+      if (this.musicPlayer === 'play') {
         this._musicPlayerService.playTrack(trackId);
       }
     }

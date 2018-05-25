@@ -18,7 +18,7 @@ export * from './repeat-music.directive';
 export * from './stop-music.directive';
 
 // Interfaces
-//export * from './itrack-event.interface';
+// export * from './itrack-event.interface';
 
 // Module
 export * from './ngx-soundmanager2.module';

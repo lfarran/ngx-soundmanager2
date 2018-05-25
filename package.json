@@ -1,6 +1,6 @@
 {
     "name": "ngx-soundmanager2",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "description": "SoundManager2 Music Player for Angular2+",
     "main": "./bundles/ngx-soundmanager2.umd.js",
     "module": "./fesm5/ngx-soundmanager2.js",
@@ -20,7 +20,7 @@
         "compodoc": "compodoc -p tsconfig.json",
         "compodoc:serve": "compodoc -s"
     },
-    "author": "",
+    "author": "Luke Farran <lfarran>",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/lfarran/ngx-soundmanager2.git"
@@ -34,7 +34,6 @@
         "music player",
         "audio player"
     ],
-    "author": "Luke Farran <lfarran>",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/lfarran/ngx-soundmanager2/issues"
