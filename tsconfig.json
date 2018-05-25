@@ -1,22 +1,25 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "es2015",
-    "sourceMap": true,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "declaration": true,
-    "outDir": "./dist",
-    "lib": [
-      "es2015",
-      "dom"
+    "compilerOptions": {
+        "baseUrl": ".",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "rootDir": ".",
+        "sourceMap": true,
+        "inlineSources": true,
+        "target": "es5",
+        "skipLibCheck": true,
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "typeRoots": [
+            "node_modules/@types/"
+        ]
+    },
+    "exclude": [
+        "node_modules"
     ]
-  },
-  "files": [
-    "./lib/ngx-soundmanager2.ts"
-  ],
-  "angularCompilerOptions": {
-    "skipTemplateCodegen": true
-  }
 }

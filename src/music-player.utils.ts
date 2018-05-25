@@ -6,7 +6,6 @@ export class MusicPlayerUtils {
   /**
    *
    * @param track
-   * @returns {boolean}
    */
   static IsTrackValid(track: any): boolean {
     if (typeof track === 'undefined') {
@@ -32,9 +31,6 @@ export class MusicPlayerUtils {
 
   /**
    * getIndexByValue used by this service
-   * @param {Array<any>} array
-   * @param value
-   * @returns {any}
    */
   static GetIndexByValue(array: Array<any>, value: any): number {
     for(let i = 0; i < array.length; i++) {
@@ -46,9 +42,6 @@ export class MusicPlayerUtils {
   }
   /**
    * To check if value is in array
-   * @param {Array<any>} array
-   * @param {string} value
-   * @returns {number}
    */
   static IsInArray(array: Array<any>, value: string): number {
     for(let i = 0; i < array.length; i++) {

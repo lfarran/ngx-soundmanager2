@@ -19,8 +19,6 @@ export class HumanTimePipe implements PipeTransform {
 
   /**
    * Pads string with zeros if less than 10
-   * @param {number} d
-   * @returns {string}
    */
   private pad(d: number): string {
     return (d < 10) ? '0' + d.toString() : d.toString();

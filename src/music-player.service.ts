@@ -182,26 +182,14 @@ export class MusicPlayerService {
     });
   }
 
-  /**
-   *
-   * @param key
-   */
   setCurrentTrack(key: string): void {
     this.currentTrack = key;
   }
 
-  /**
-   *
-   * @returns {any}
-   */
   getCurrentTrack() {
     return this.currentTrack;
   }
 
-  /**
-   *
-   * @returns {any}
-   */
   currentTrackData() {
     let trackId = this.getCurrentTrack();
     let currentKey = MusicPlayerUtils.IsInArray(this.playlist, trackId);
@@ -211,7 +199,6 @@ export class MusicPlayerService {
   /**
    *
    * @param key
-   * @returns {Array<any>}
    */
   getPlaylist(key?: number): Array<any> {
     if(typeof key === 'undefined') {
@@ -237,7 +224,6 @@ export class MusicPlayerService {
   /**
    *
    * @param track
-   * @returns {number}
    */
   addTrack(track: any): number {
     //check if track itself is valid and if its url is playable
@@ -260,11 +246,6 @@ export class MusicPlayerService {
     return track.id;
   }
 
-  /**
-   *
-   * @param song
-   * @param {number} index
-   */
   removeSong(song: any, index: number): void {
     //if this song is playing stop it
     if(song === this.currentTrack) {
@@ -454,7 +435,6 @@ export class MusicPlayerService {
 
   /**
    * Mute Accessor
-   * @returns {boolean}
    */
   getMuteStatus() {
     return soundManager.muted;
@@ -478,18 +458,10 @@ export class MusicPlayerService {
     return false;
   }
 
-  /**
-   *
-   * @returns {any}
-   */
   getRepeatStatus(): boolean {
     return this.repeat;
   }
 
-  /**
-   *
-   * @returns {any}
-   */
   getVolume(): number {
     return this.volume;
   }
@@ -586,10 +558,6 @@ export class MusicPlayerService {
     this.trackProgress = 0;
   }
 
-  /**
-   *
-   * @returns {any}
-   */
   isPlayingStatus() {
     return this.isPlaying;
   }
